@@ -11,7 +11,7 @@
 
 		"start": "npm run start:prod",
 		"start:dev": "nest start --watch",
-		"start:prod": "node dist/main",
+		"start:prod": "node dist/nest/main",
 
 		"tailwind:dev": "tailwindcss -i ./srcs/styles/index.css -o ./dist/styles/index.css --watch",
 		"tailwind:prod": "tailwindcss -i ./srcs/styles/index.css -o ./dist/styles/index.css -m",
