@@ -1,4 +1,4 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Get, Param, Query } from '@nestjs/common';
 import { Recipe } from 'srcs/nest/recipes.interface';
 import { RecipesService } from './recipes.service';
 
@@ -12,7 +12,12 @@ export class RecipesController {
 	}
 
 	@Get('search/:query')
-	async search(@Param('query') query: string): Promise<Recipe[]> {
-		return await this.recipesService.search(query);
+	async search(
+		@Param('query') query: string,
+		@Query('vegan') vegan: boolean,
+		@Query('vegetarian') vegetarian: boolean,
+		@Query('limit') limit: number,
+	): Promise<Recipe[]> {
+		return await this.recipesService.search(query, vegan, vegetarian, limit);
 	}
 }

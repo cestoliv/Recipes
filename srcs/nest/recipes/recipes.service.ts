@@ -55,15 +55,21 @@ export class RecipesService {
 		return recipe;
 	}
 
-	async search(query: string): Promise<Recipe[]> {
+	async search(
+		query: string,
+		vegan: boolean,
+		vegetarian: boolean,
+		limit: number,
+	): Promise<Recipe[]> {
 		const recipes: Recipe[] = [];
 
 		const qb = new MarmitonQueryBuilder();
-		const q = qb.withTitleContaining(query).build();
-		const result = await searchRecipes(q);
+		const q = qb.withTitleContaining(query);
+		if (vegan) q.vegan();
+		else if (vegetarian) q.vegetarian();
 
-		if (!result || result.length == 0)
-			throw new HttpException("Can't find any recipe", 404);
+		if (!limit) limit = 12;
+		const result = await searchRecipes(q.build(), { limit });
 
 		for (const recipe of result) {
 			if (
@@ -77,8 +83,7 @@ export class RecipesService {
 				});
 		}
 
-		if (recipes.length == 0)
-			throw new HttpException("Can't find any recipe", 404);
+		if (recipes.length != 0) recipes.sort((a, b) => b.rate - a.rate);
 
 		return recipes;
 	}

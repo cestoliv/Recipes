@@ -8,6 +8,8 @@ module.exports = {
 			'ghost-white': '#f0eff4',
 			white: '#fff',
 			gray: '#cccccc',
+			veggie: '#97be0d',
+			'dark-veggie': '#617711',
 		},
 		fontFamily: {
 			sans: ['Montserrat', 'Helvetica', 'Arial', 'sans-serif'],
