@@ -100,7 +100,7 @@
 				<% } %>
 			</ul>
 		</div>
-		<div class="lg:w-2/3 lg:ml-14 mt-10">
+		<div class="lg:w-2/3 lg:ml-14 mt-10 lg:mt-0">
 			<h2 class="font-bold text-lg mb-5">Préparation</h2>
 			<ol>
 				<% for (let i = 0; i < it.recipe.steps.length; i++) { %>
