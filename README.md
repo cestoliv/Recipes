@@ -21,9 +21,9 @@ A simple site that retrieves recipes via marmiton to display in a slightly more 
 To deploy this project run
 
 ```bash
-  npm install
-  npm run build
-  npm run start
+npm install
+npm run build
+npm run start
 ```
 
 ### Development
@@ -31,14 +31,14 @@ To deploy this project run
 Install the dependencies
 
 ```bash
-  npm install
+npm install
 ```
 
 Then, run these two commands in parallel
 
 ```bash
-  npm run start:dev
-  npm run tailwind:dev
+npm run start:dev
+npm run tailwind:dev
 ```
 
 ### Docker
@@ -52,7 +52,7 @@ The directory also contains a `docker-compose.yml` file.
 ### Search for a recipe
 
 ```http
-  GET /api/v1/recipes/search/${query}
+GET /api/v1/recipes/search/${query}
 ```
 
 | Parameter    | Type      | Description                            |
@@ -64,7 +64,7 @@ The directory also contains a `docker-compose.yml` file.
 ### Get a recipe
 
 ```http
-  GET /api/v1/recipes/${id}
+GET /api/v1/recipes/${id}
 ```
 
 | Parameter | Type     | Description                       |
