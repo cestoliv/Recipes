@@ -25,7 +25,7 @@
 		"@nestjs/common": "^9.0.0",
 		"@nestjs/core": "^9.0.0",
 		"@nestjs/platform-fastify": "^9.1.2",
-		"eta": "^1.12.3",
+		"eta": "^2.0.0",
 		"marmiton-api": "^2.3.0",
 		"node-html-parser": "^6.1.1",
 		"reflect-metadata": "^0.1.13",
