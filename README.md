@@ -6,7 +6,7 @@ A simple site that retrieves recipes via marmiton to display in a slightly more 
 
 ## Screenshot
 
-![Reipes Screenshot](.readme/screenshots/search.png)
+![Recipes Screenshot](.readme/screenshots/search.png)
 
 ## Tech Stack
 

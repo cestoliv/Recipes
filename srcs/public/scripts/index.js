@@ -113,7 +113,9 @@ function fetch_recipes(query) {
 				dom_search_error.classList.remove('hidden');
 				return;
 			}
-			display_results(data);
+			// If data is an array, display results
+			if (Array.isArray(data)) display_results(data);
+			else console.error("Can't process", data);
 		});
 }
 
